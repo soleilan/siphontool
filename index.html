@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clickable Grid</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="outerGridWrapper" oncontextmenu="return false;">
+        <div class="label" id="topleft"></div>
+        <div class="label A top">A</div>
+        <div class="label B top">B</div>
+        <div class="label C top">C</div>
+        <div class="label D top">D</div>
+        <div class="label E top">E</div>
+        <div class="label F top">F</div>
+        <div class="label G top">G</div>
+        <div class="label H top">H</div>
+        <div class="label I top">I</div>
+        <div class="label eight side">8</div>
+        <div class="label seven side">7</div>
+        <div class="label six side">6</div>
+        <div class="label five side">5</div>
+        <div class="label four side">4</div>
+        <div class="label three side">3</div>
+        <div class="label two side">2</div>
+        <div class="label one side">1</div>
+        <div class="label zero side">0</div>
+        <div id="innerGridWrapper"></div>
+      </div>
+      <div class="sidewindow">
+          <div id="statustext">
+            <div id="status-eeu" class="wrapper">
+              <span class="category">EEU per Cycle:</span>
+              <span id="value-eeu" class="value">0</span>
+            </div>
+            
+            <div id="status-shear" class="wrapper">
+              <span class="category">Total Shear:</span>
+              <span id="value-shear" class="value">0</span>
+            </div>
+
+            <div id="status-lateral" class="wrapper">
+              <span class="category">Lateral Resonance:</span>
+              <span id="value-lateral" class="value">0</span>
+            </div>
+
+            <div id="status-vertical" class="wrapper">
+              <span class="category">Vertical Resonance:</span>
+              <span id="value-vertical" class="value">0</span>
+            </div>
+          </div>
+          <div id="resonator-wrapper">
+          <div id ="resonator-list" class="list">
+            
+            <template id="resonator-template">
+              <div class="resonator">
+                <div class="controls">
+                  <div class="designation">
+                    <span>??</span>
+                  </div>
+                  <div class="type">
+                    <span>??</span>
+                  </div>
+                  <div class="slider">
+                    <input type="range" min="0" max="4" value="1" />
+                    <div class="ticks">
+                      <svg width="20" height="20">
+                        <polygon
+                          points="10,0 20,10 10,20 0,10"
+                          stroke="black"
+                          stroke-width="1"
+                          fill="none"
+                        />
+                      </svg>
+                      <svg class ="tickone" width="20" height="20">
+                        <polygon
+                          points="10,0 20,10 10,20 0,10"
+                          stroke="black"
+                          stroke-width="1"
+                          fill="none"
+                        />
+                      </svg>
+                      <svg class="ticktwo" width="20" height="20">
+                        <polygon
+                          points="10,0 20,10 10,20 0,10"
+                          stroke="black"
+                          stroke-width="1"
+                          fill="none"
+                        />
+                      </svg>
+                      <svg class="tickthree" width="20" height="20">
+                        <polygon
+                          points="10,0 20,10 10,20 0,10"
+                          stroke="black"
+                          stroke-width="1"
+                          fill="none"
+                        />
+                      </svg>
+                      <svg class="tickfour" width="20" height="20">
+                        <polygon
+                          points="10,0 20,10 10,20 0,10"
+                          stroke="black"
+                          stroke-width="1"
+                          fill="none"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="remove">
+                    <button></button>
+                  </div>
+                </div>
+                <div class="data">
+                  <span class="category">Lateral</span>
+                  <span>Value:</span>
+                  <span class="value latvalue">4</span>
+                  <span class="lateffect">Resonance:</span>
+                  <span class="value latresult">4</span>
+
+                  <span class="category">Vertical</span>
+                  <span>Value:</span>
+                  <span class="value vertvalue">8</span>
+                  <span class="verteffect">Resonance:</span>
+                  <span class="value vertresult">8</span>
+                </div>
+              </div>
+            </template>
+          </div></div>
+      </div>
+    </div>
+  </body>
+</html>
